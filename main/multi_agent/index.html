@@ -223,12 +223,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../environments/racetrack/">Racetrack</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../content/algorithms/">Agent Examples</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../user_guide/">User Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of User Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../observations/">Observations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions/">Actions</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dynamics/">Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Dynamics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/road/lane/">Lane</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/road/road/">Road</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dynamics/road/neighbour_vehicles/">Neighbour vehicles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/road/regulation/">Road regulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/vehicle/kinematics/">Kinematics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/vehicle/controller/">Control</a></li>
@@ -242,12 +244,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/publications/">List of Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv">Github</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv/blob/master/README.md">Contribute to the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv">GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv/blob/main/README.md">Contribute to the Docs</a></li>
 </ul>
 
 </div>
@@ -334,7 +337,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/multi_agent_0_1.png" src="../_images/multi_agent_0_1.png" />
+<img alt="../_images/multi_agent_0_0.png" src="../_images/multi_agent_0_0.png" />
 </div>
 </div>
 </section>
@@ -402,11 +405,11 @@ The type of observations contained in the tuple must be described by a standard 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>(array([[ 1.        ,  0.9048631 ,  0.25      ,  0.3125    ,  0.        ],
-       [ 1.        ,  0.0950691 ,  0.5       , -0.04358901,  0.        ],
-       [ 1.        ,  0.20074879,  0.        , -0.01341979,  0.        ],
-       [ 1.        ,  0.3087887 , -0.25      , -0.04620234,  0.        ],
-       [ 1.        ,  0.41629145,  0.5       , -0.04074187,  0.        ]],
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>(array([[ 1.        ,  0.9056075 ,  0.        ,  0.3125    ,  0.        ],
+       [ 1.        ,  0.10895579,  0.        , -0.04013364,  0.        ],
+       [ 1.        ,  0.21395342,  0.5       , -0.02266968,  0.        ],
+       [ 1.        ,  0.32933605,  0.75      , -0.02651527,  0.        ],
+       [ 1.        ,  0.4419124 ,  0.        , -0.03861693,  0.        ]],
       dtype=float32),)
 </pre></div>
 </div>
@@ -473,7 +476,7 @@ python<span class="w"> </span>experiments.py<span class="w"> </span>evaluate<spa
 </pre></div>
 </div>
 <figure class="align-default" id="id1">
-<img alt="https://raw.githubusercontent.com/eleurent/highway-env/gh-media/docs/media/intersection_multi_agent.gif" src="https://raw.githubusercontent.com/eleurent/highway-env/gh-media/docs/media/intersection_multi_agent.gif" />
+<img alt="https://raw.githubusercontent.com/Farama-Foundation/HighwayEnv/gh-media/docs/media/intersection_multi_agent.gif" src="https://raw.githubusercontent.com/Farama-Foundation/HighwayEnv/gh-media/docs/media/intersection_multi_agent.gif" />
 <figcaption>
 <p><span class="caption-text">Video of a multi-agent episode with the trained policy.</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
 </figcaption>

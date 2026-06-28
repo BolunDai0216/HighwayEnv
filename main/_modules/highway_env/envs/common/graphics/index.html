@@ -222,12 +222,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../../../environments/racetrack/">Racetrack</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/algorithms/">Agent Examples</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../user_guide/">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of User Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../observations/">Observations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../actions/">Actions</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../dynamics/">Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Dynamics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../dynamics/road/lane/">Lane</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../dynamics/road/road/">Road</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../dynamics/road/neighbour_vehicles/">Neighbour vehicles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../dynamics/road/regulation/">Road regulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../dynamics/vehicle/kinematics/">Kinematics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../dynamics/vehicle/controller/">Control</a></li>
@@ -241,12 +243,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../faq/">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../content/publications/">List of Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../bibliography/">Bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv">Github</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv/blob/master/README.md">Contribute to the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv">GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv/blob/main/README.md">Contribute to the Docs</a></li>
 </ul>
 
 </div>
@@ -335,7 +338,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="kc">None</span>
 
-        <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
         <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s2">&quot;Highway-env&quot;</span><span class="p">)</span>
         <span class="n">panel_size</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;screen_width&quot;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;screen_height&quot;</span><span class="p">])</span>
 

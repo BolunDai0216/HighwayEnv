@@ -223,12 +223,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../environments/racetrack/">Racetrack</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../content/algorithms/">Agent Examples</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../user_guide/">User Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of User Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Observations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../actions/">Actions</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../dynamics/">Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Dynamics</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/road/lane/">Lane</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/road/road/">Road</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../dynamics/road/neighbour_vehicles/">Neighbour vehicles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/road/regulation/">Road regulation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/vehicle/kinematics/">Kinematics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../dynamics/vehicle/controller/">Control</a></li>
@@ -242,12 +244,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../content/publications/">List of Publications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography/">Bibliography</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv">Github</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv/blob/master/README.md">Contribute to the Docs</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv">GitHub</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/Farama-Foundation/HighwayEnv/blob/main/README.md">Contribute to the Docs</a></li>
 </ul>
 
 </div>
@@ -391,7 +394,7 @@ For instance:</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The ego-vehicle is always described in the first row</p>
+<p>The ego-vehicle is always described in the first row. The default is ‘presence’, ‘x’, ‘y’, ‘vx’, ‘vy’, five features.</p>
 </div>
 <p>If configured with <code class="docutils literal notranslate"><span class="pre">normalize=True</span></code> (default), the observation is normalized within a fixed range, which gives for
 the range [100, 100, 20, 20]:</p>
@@ -571,25 +574,25 @@ vehicle and 0 for placeholders.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[[ 1.          1.          0.08        1.          0.          1.
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>[[ 1.          1.          0.04        1.          0.          1.
    0.        ]
- [ 1.          0.19211689 -0.08       -0.12652701  0.          1.
+ [ 1.          0.205058    0.         -0.14819434  0.          1.
    0.        ]
- [ 1.          0.41191244 -0.04       -0.0828253   0.          1.
+ [ 1.          0.39752513  0.04       -0.16419768  0.          1.
    0.        ]
- [ 1.          0.6448665   0.04       -0.05910929  0.          1.
+ [ 1.          0.6214928   0.04       -0.11928202  0.          1.
    0.        ]
- [ 1.          0.87528265 -0.08       -0.11089319  0.          1.
+ [ 1.          0.81282127  0.04       -0.16682953  0.          1.
    0.        ]
- [ 1.          1.          0.         -0.08716194  0.          1.
+ [ 1.          0.9967624   0.         -0.19264832  0.          1.
    0.        ]
- [ 1.          1.          0.04       -0.14065064  0.          1.
+ [ 1.          1.          0.         -0.13835023  0.          1.
    0.        ]
- [ 1.          1.         -0.08       -0.10472623  0.          1.
+ [ 1.          1.          0.08       -0.14153707  0.          1.
    0.        ]
- [ 1.          1.         -0.04       -0.18884036  0.          1.
+ [ 1.          1.          0.04       -0.18375851  0.          1.
    0.        ]
- [ 1.          1.         -0.08       -0.11016771  0.          1.
+ [ 1.          1.          0.08       -0.09359597  0.          1.
    0.        ]
  [ 0.          0.          0.          0.          0.          0.
    0.        ]
@@ -638,7 +641,7 @@ The RGB to grayscale conversion is a weighted sum, configured by the <code class
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/index_1_2.png" src="../_images/index_1_2.png" />
+<img alt="../_images/index_1_0.png" src="../_images/index_1_0.png" />
 </div>
 </div>
 </section>
@@ -772,8 +775,9 @@ The grid size and resolution is defined by the <code class="docutils literal not
 <p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">TimeToCollisionObservation</span></code> is a <span class="math notranslate nohighlight">\(V\times L\times H\)</span> array, that represents the predicted time-to-collision of observed vehicles on the same road as the ego-vehicle.
 These predictions are performed for <span class="math notranslate nohighlight">\(V\)</span> different values of the ego-vehicle speed, <span class="math notranslate nohighlight">\(L\)</span> lanes on the road around the current lane, and represented as one-hot encodings over <span class="math notranslate nohighlight">\(H\)</span> discretised time values (bins), with 1s steps.</p>
 <p>For instance, consider a vehicle at 25m on the right-lane of the ego-vehicle and driving at 15 m/s. Using <span class="math notranslate nohighlight">\(V=3,\, L = 3\,H = 10\)</span>, with ego-speed of {<span class="math notranslate nohighlight">\(15\)</span> m/s, <span class="math notranslate nohighlight">\(20\)</span> m/s and <span class="math notranslate nohighlight">\(25\)</span> m/s}, the predicted time-to-collisions are <span class="math notranslate nohighlight">\(\infty,\,5s,\,2.5s\)</span> and the corresponding observation is</p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="table-wrapper docutils container" id="id9">
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">$15$ m/s</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>0</p></td>
 <td><p>0</p></td>
@@ -811,8 +815,9 @@ These predictions are performed for <span class="math notranslate nohighlight">\
 </tbody>
 </table>
 </div>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="table-wrapper docutils container" id="id10">
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">$20$ m/s</span><a class="headerlink" href="#id10" title="Link to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>0</p></td>
 <td><p>0</p></td>
@@ -850,8 +855,9 @@ These predictions are performed for <span class="math notranslate nohighlight">\
 </tbody>
 </table>
 </div>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
+<div class="table-wrapper docutils container" id="id11">
+<table class="docutils align-default" id="id11">
+<caption><span class="caption-text">$25$ m/s</span><a class="headerlink" href="#id11" title="Link to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>0</p></td>
 <td><p>0</p></td>
@@ -909,9 +915,9 @@ These predictions are performed for <span class="math notranslate nohighlight">\
 </ul>
 <p>The angular sector of index 0 corresponds to an angle 0 (east), and then each index/sector increases the angle (south, west, north).</p>
 <p>For example, for a grid of 8 cells, an obstacle 10 meters away in the south and moving towards the north at 1m/s would lead to the following observation:</p>
-<div class="table-wrapper docutils container" id="id9">
-<table class="docutils align-default" id="id9">
-<caption><span class="caption-text">the Lidar observation</span><a class="headerlink" href="#id9" title="Link to this table">¶</a></caption>
+<div class="table-wrapper docutils container" id="id12">
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">the Lidar observation</span><a class="headerlink" href="#id12" title="Link to this table">¶</a></caption>
 <tbody>
 <tr class="row-odd"><td><p>0</p></td>
 <td><p>0</p></td>
@@ -961,7 +967,7 @@ These predictions are performed for <span class="math notranslate nohighlight">\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/index_3_1.png" src="../_images/index_3_1.png" />
+<img alt="../_images/index_3_0.png" src="../_images/index_3_0.png" />
 </div>
 </div>
 <p>You can configure the number of cells in the angular grid with the <code class="docutils literal notranslate"><span class="pre">cells</span></code> parameter, the maximum range with <code class="docutils literal notranslate"><span class="pre">maximum_range</span></code>, and if you enable <code class="docutils literal notranslate"><span class="pre">normalize</span></code>, then distances and relative speeds are both divided by the maximum range.</p>
